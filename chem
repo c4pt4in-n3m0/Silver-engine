@@ -1,0 +1,390 @@
+from random import choice as ran
+import tkinter as tk
+from tkinter import messagebox
+root = tk.Tk()
+
+HEIGHT = 600
+WIDTH = 1200
+
+class Saltcheck():
+    def acidcall():
+        get1 = entry_base.get()
+        if get1==base:
+            label['text'] = "Acid is correct. " \
+                            "The acid is :  "+base
+
+        else:
+            label['text'] = "The acid is incorrect "
+
+    def basecall():
+        get2 = entry_acid.get()
+        if get2==acid:
+            label['text'] = "Base is correct. " \
+                            "The base is :  " + acid
+        else:
+            label['text'] = "The base is incorrect "
+
+def messagebox():
+    from tkinter import messagebox
+    root.eval('tk::PlaceWindow %s center' % root.winfo_toplevel())
+
+    messagebox.showinfo('Info', 'Please enter a valid experiment!!')
+    root.deiconify()
+
+class Acidradical():
+    def appearence():
+        color = ["CaCO", "MgPO", "MgCO", "ZnS"]
+        if (fullsalt in color):
+            label['text'] = ("The salt is white colour")
+        else:
+            label['text'] = "The salt is colourless"
+
+    def solubility():
+            insoluble = ["Ca CO", "Mg PO", "Mg CO", "Zn S"]
+            if (fullsalt in insoluble):
+                label['text'] = "The salt in insoluble in water"
+            else:
+                label['text'] = "The salt is soluble in water"
+
+    def actionofheat():
+        if acid == "Zn":
+            string = "White salt turns yellow"
+        elif base == "CO":
+            string = "colourless gas turning lime water milky"
+        elif base == "NO":
+            string = "Reddish brown vapours are formed"
+        elif fullsalt == "PbNO":
+            string = "decriptation"
+        elif fullsalt == "NHCl":
+            string = "white sublimate is formed on the inner sides of test tube"
+        else:
+            string = "No characteristic change"
+        label['text'] = string
+
+    def flametest():
+            if acid == "Ca":
+                label["text"] = "Brick red flame"
+            elif acid == "Ba":
+                label["text"] = "apple green flame"
+            else:
+                label['text'] = "No characteristic flame"
+
+    def actionofhcl():
+        if base == "CO":
+            label["text"] = "Brisk effervescence is seen"
+        elif base == "S":
+            label["text"] = "Colourless gas with rotten egg smell"
+        else:
+            label['text'] = "No Brisk effervescence is seen and" \
+                            "Colourless gas with rotten egg smell  "
+
+    def actionofmn02():
+        if base == 'Cl':
+            label['text'] = "Greenish yellow gas is evolved"
+        else:
+            label['text'] = "No greenish yellow gas is evolved"
+
+    def copperturning():
+        if base == 'NO':
+            label['text'] = "Reddish brown vapours"
+        else:
+            label['text'] = "No reddish brown vapours are evloved"
+
+    def chromyl():
+        if base == 'Cl':
+            label['text'] = "Reddish orange vapours"
+        else:
+            label['text'] = "No reddish orange vapours evloved"
+
+    def ammonium():
+        if base == "PO":
+            label['text'] = "Canary yello precipitate is formed"
+        else:
+            label['text'] = "No canary yellow precipitate is formed"
+
+    def esters():
+        if acid == "CH3COO":
+            label['text'] = "Pleasant fruity smell of esters is formed"
+        else:
+            label['text'] = "No pleasant fruity smell of esters is formed"
+
+class Acidconfirmatory:
+    def barium():
+        if acid == "CO":
+            label['text'] = "White precipitate soluble in conc.HCl"
+        if base == "SO":
+            label['text'] = "White pricipitate insoluble in conc.Hcl"
+        else:
+            label['text'] = "No characteristic change"
+
+    def silver():
+        if base == "Cl":
+            label['text'] = "Curdy white precipitate is obtained which is soluble in NH4OH"
+        else:
+            label['text'] = "No curdy white precipitate"
+
+    def brownring():
+        if base == "NO":
+            label['text'] = "A dark brown ring is formed at the junction of two  liquids"
+        else:
+            label['text'] = "No dark brown ring is formed"
+
+    def leadacetate():
+        if base == "SO":
+            label['text'] = "A white precipitate is obtained"
+        else:
+            label['text'] = "No white precipitate is obtained"
+
+    def magnesiumsulphate():
+        if base == "CO":
+            label['text'] = "A white precipitate is obtained"
+
+class Basicradical:
+    def group1():
+        if acid == "Pb":
+            label['text'] = "A white precipitate is obtained"
+        else:
+            label['text'] = "No characteristic precipitate obtained"
+
+    def group2():
+        if acid == "Pb":
+            label['text'] = "A white precipitate is obtained"
+        else:
+            label['text'] = "No characteristic precipitate obtained"
+
+    def group3():
+        if acid == "Al":
+            label['text'] = "A gelatanious white precipitate is obtained"
+        else:
+            label['text'] = "No gelatanious white precipitate is obtained"
+
+    def group4():
+        if acid == "Zn":
+            label['text'] = "A white precipitate in obtained"
+        else:
+            label['text'] = "No white precipitate is obtained"
+
+    def group5():
+        if (acid == "Ca") or (acid == "Ba"):
+            label['text'] = "A white precipitate is obtained"
+        else:
+            label['text'] = "No white precipitate is obtained"
+
+    def group6():
+        if acid == "Mg":
+            label['text'] = "A crystalline white precipitate is obtained on scratching the" \
+                            "rides of the test tube with a glass rod"
+        else:
+            label['text'] = "No crystalline white precipitate is obtained"
+
+    def group0():
+        if acid == "NH":
+            label['text'] = "A pungent smelling gas is evlolved"
+        else:
+            label['text'] = "No pungent smelling gas is evolved"
+
+class Basicconfirmatory:
+    def pbcon():
+        if acid == "Pb":
+            label['text'] = "A yellow precipitate is obtained"
+        else:
+            label['text'] = "No yellow precipitate is obtained"
+
+    def alcon():
+        if acid == "Al":
+            label['text'] = "Bright red lake is observed"
+        else:
+            label['text'] = "No bright red lake is observed"
+
+    def zncon():
+        if acid == "Zn":
+            label['text'] = "Bluish white precipitate"
+        else:
+            label['text'] = "No bluish white precipitate obtained"
+
+    def cacon():
+        if acid == "Ca":
+            label['text'] = "A white precipitate is obtained"
+        else:
+            label['text'] = "No white precipitate obtained"
+
+    def mgcon():
+        if acid == "Mg":
+            label['text'] = "Blue precipitate is obtained"
+        else:
+            label['text'] = "No blue precipitate is obtained"
+
+    def nhcon():
+        if acid == "NH":
+            label['text'] = "Reddish brown precipitate is obtained"
+        else:
+            label['text'] = "No reddish brown precipitate is obatined"
+
+    def bacon():
+        if acid == "Ba":
+            label['text'] = "Yellow precipitate is obtained"
+        else:
+            label['text'] = "No yellow precipitate is obhtained"
+
+def callback():
+    get = entry.get()
+    f = open("data.txt", 'a+')
+    f.write(get)
+    f.close()
+    if get == "exit":
+        root.destroy()
+    elif get == "appearence":
+        Acidradical.appearence()
+    elif get == "solubility":
+        Acidradical.solubility()
+    elif get == "action of heat":
+        Acidradical.actionofheat()
+    elif get == "flame test":
+        Acidradical.flametest()
+    elif get == "action of hcl":
+        Acidradical.actionofhcl()
+    elif get == "action of h2so4 and mn02":
+        Acidradical.actionofmn02()
+    elif get == "copper turnings test":
+        Acidradical.copperturning()
+    elif get == "chromyl chloride test":
+        Acidradical.chromyl()
+    elif get == "ammonium molybdate test":
+        Acidradical.ammonium()
+    elif get == "ester formation test":
+        Acidradical.esters()
+    elif get == "barium chloride test":
+        Acidconfirmatory.barium()
+    elif get == "silver nitrate test":
+        Acidconfirmatory.silver()
+    elif get == "brown ring test":
+        Acidconfirmatory.brownring()
+    elif get == "lead acetate test":
+        Acidconfirmatory.leadacetate()
+    elif get == "magnesium sulphate test":
+        Acidconfirmatory.magnesiumsulphate()
+    elif get == "group 1":
+        Basicradical.group1()
+    elif get == "group 2":
+        Basicradical.group2()
+    elif get == "group 3":
+        Basicradical.group3()
+    elif get == "group 4":
+        Basicradical.group4()
+    elif get == "group 5":
+        Basicradical.group5()
+    elif get == "group 6":
+        Basicradical.group6()
+    elif get == "group 0":
+        Basicradical.group0()
+    elif get == "confirmatory for pb":
+        Basicconfirmatory.pbcon()
+    elif get == "confirmatory for al":
+        Basicconfirmatory.alcon()
+    elif get == "confirmatory for zn":
+        Basicconfirmatory.zncon()
+    elif get == "confirmatory for ba":
+        Basicconfirmatory.bacon()
+    elif get == "confirmatory for ca":
+        Basicconfirmatory.cacon()
+    elif get == "confirmatory for mg":
+        Basicconfirmatory.mgcon()
+    elif get == "confirmatory for nh":
+        Basicconfirmatory.nhcon()
+    elif get == "acid":
+        label["text"] = acid
+    elif get == "base":
+        label["text"] = base
+    elif get == "salt":
+        label["text"] = salt2
+    else:
+        messagebox()
+
+list_salt = ["Al SO", "CH3COO NH", "NH CO", "NH Cl", "NH SO", "Ba Cl", "Ba NO", "Ca Cl", "Ca SO", "Ca CO"]
+list_salt1 = ["Ca CO", "Pb NO", "CH3COO Pb", "Mg PO", "Mg CO", "Mg Cl", "Mg SO", "Zn SO", "Zn S", "NH C2O4"]
+list_salt.extend(list_salt1)
+salt2 = ran(list_salt)
+fullsalt = str(salt2)
+
+salt1 = []
+acidrad = []
+baserad = []
+n = ""
+k = ""
+for x in salt2:
+    salt1.append(x)
+for i in range(len(salt2)):
+    if salt1[i] == " ":
+        gap = i
+for j in range(gap):
+    acidrad.append(salt1[j])
+for m in range(0, len(acidrad)):
+    n = n + acidrad[m]
+acid = str(n)
+
+for j in range(gap + 1, len(salt1)):
+    baserad.append(salt1[j])
+for y in range(0, len(baserad)):
+    k = k + baserad[y]
+base = str(k)
+
+canvas = tk.Canvas(root, height=HEIGHT, width=WIDTH,bg='black')
+canvas.pack()
+
+background_label = tk.Label(root,bg='black',bd=5)
+background_label.place(relwidth=1, relheight=1)
+
+frame = tk.Frame(root,bg="red",bd=5)
+frame.place(relx=0.3, rely=0.03, relwidth=0.5, relheight=0.1, anchor="n")
+
+entry = tk.Entry(frame, font=("times new roman",20))
+entry.place(relwidth=0.78,relx=0, relheight=1,rely=0.02)
+
+side_frame1 = tk.Frame(root,bg='blue',bd=5)
+side_frame1.place(relx=0.77, rely=0.03, relwidth=0.4, relheight=0.1, anchor="n")
+
+entry_acid = tk.Entry(side_frame1,font=("times new roman",20))
+entry_acid.place(relx=0,rely=0.04,relwidth=0.5,relheight=0.9)
+
+side_frame2 = tk.Frame(root,bg='yellow',bd=5)
+side_frame2.place(relx=0.77,rely=0.14,relwidth=0.4, relheight=0.1, anchor="n")
+
+entry_base = tk.Entry(side_frame2,font=("times new roman",20))
+entry_base.place(relx=0,rely=0.04,relwidth=0.5,relheight=0.9)
+
+button = tk.Button(frame, text="GET OBS", font=("times new roman",18,'bold'),fg="black", command=callback)
+button.place(relx=0.8, relheight=1, relwidth=0.2)
+
+lower_frame = tk.Frame(root,bg='white',bd=5)
+lower_frame.place(relx=0.3, rely=0.25, relwidth=0.5, relheight=0.6, anchor="n")
+
+label = tk.Message(lower_frame,fg='white',bg="black")
+label.config(font=("times new roman", 20, "bold"))
+label.place(relx=0.4989, rely=0, relwidth=1, relheight=1, anchor="n")
+
+root.title("Chemistry Practical")
+
+author = tk.Message(root,text="coded by ARA",font=('times new roman',10,'bold'))
+author.place(relx=0.89,rely=0.9)
+
+side_frame = tk.Frame(root,bg='white',bd=5)
+side_frame.place(relx = 0.6,rely=0.25,relheight=0.6,relwidth=0.37)
+
+tips = "TIPS FOR ANALYSING THE SALT" \
+       "=> XXX - XXX - XXX" \
+       "=> XXX - XXX - XXX" \
+       "=> XXX - XXX - XXX" \
+       "=> XXX - XXX - XXX"
+
+
+hints = tk.Message(side_frame,fg='white',bg='black',font=('times new roman',15,'bold'))
+hints['text'] = tips
+hints.place(relheight=1,relwidth=1)
+
+base_button = tk.Button(side_frame2,text="CHECK ACID",font=("times new roman",20,'bold'),command=Saltcheck.acidcall)
+base_button.place(relx=0.53,rely=0.04,relheight=0.9,relwidth=0.45)
+
+acid_button = tk.Button(side_frame1,text="CHECK BASE",font=("times new roman",20,'bold'),command=Saltcheck.basecall)
+acid_button.place(relx=0.53,rely=0.04,relheight=0.9,relwidth=0.45)
+
+root.mainloop()
